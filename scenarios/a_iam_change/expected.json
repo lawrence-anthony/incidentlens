@@ -1,0 +1,15 @@
+{
+  "title": "Scenario A: orders_daily fails after an IAM change",
+  "description": "Nightly ETL fails with AccessDenied a little over an hour after a least-privilege cleanup.",
+  "scenario": "a_iam_change",
+  "deterministic": {"first_failure": "LOG-0005", "linked_changes": ["CHG-0002"], "after_failure_changes": ["CHG-0004"]},
+  "verdict": "probable_cause",
+  "top_hypothesis": {
+    "category": "permissions",
+    "must_cite": ["CHG-0002"],
+    "must_cite_one_of": ["LOG-0005", "LOG-0007", "LOG-0009", "LOG-0010"],
+    "min_confidence": "medium"
+  },
+  "not_top_cause": ["CHG-0001", "CHG-0003", "CHG-0004"],
+  "max_flagged_actions": 0
+}

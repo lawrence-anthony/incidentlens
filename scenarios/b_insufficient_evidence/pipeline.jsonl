@@ -1,0 +1,8 @@
+{"ts": "2026-11-20T05:00:00Z", "level": "INFO", "component": "scheduler", "message": "DAG run inventory_sync started (run_id=scheduled__2026-11-20T05:00). Previous run 2026-11-19T04:00Z succeeded."}
+{"ts": "2026-11-20T05:00:02Z", "level": "INFO", "component": "sync_inventory", "message": "Task started on etl-worker-1"}
+{"ts": "2026-11-20T05:00:03Z", "level": "INFO", "component": "sync_inventory", "message": "Reading inventory snapshot from supplier-feed-synth"}
+{"ts": "2026-11-20T05:07:41Z", "level": "WARN", "component": "sync_inventory", "message": "Heartbeat delayed by 95s"}
+{"ts": "2026-11-20T05:09:12Z", "level": "ERROR", "component": "sync_inventory", "message": "Task exited with non-zero status 1"}
+{"ts": "2026-11-20T05:09:12Z", "level": "WARN", "component": "sync_inventory", "message": "Driver log upload failed; detailed logs are unavailable for this attempt"}
+{"ts": "2026-11-20T05:09:13Z", "level": "ERROR", "component": "scheduler", "message": "DAG run inventory_sync failed"}
+{"ts": "2026-11-20T05:20:00Z", "level": "WARN", "component": "freshness_monitor", "message": "analytics.inventory_levels is stale: last loaded 2026-11-19T04:31Z; SLA 08:00Z"}

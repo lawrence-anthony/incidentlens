@@ -1,0 +1,16 @@
+# IncidentLens beside the workshop app.service. Install only with approval; see docs/IMPLEMENTATION_PLAN.md.
+[Unit]
+Description=IncidentLens on port 8080
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/root/incidentlens
+Environment=HOME=/root
+Environment=PORT=8080
+ExecStart=/root/.local/bin/uv run --frozen --no-dev python -m incidentlens
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,77 @@
+# Environment files; only a reviewed, placeholder-only example may be committed.
+.env
+.env.*
+!.env.example
+
+# Local credentials and private keys.
+.aws/
+.ssh/
+.credentials/
+credentials/
+.secrets/
+secrets/
+.boto
+.netrc
+.pgpass
+.pg_service.conf
+credentials.json
+*-credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Python environments, caches, and packaging output. Keep uv.lock trackable.
+.venv/
+venv/
+env/
+.uv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.cache/
+.tox/
+.nox/
+*.egg-info/
+build/
+dist/
+
+# Test output and optional frontend dependencies.
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+junit.xml
+node_modules/
+.vite/
+.playwright/
+playwright-report/
+test-results/
+
+# Runtime uploads, reports, logs, temporary files, and demo recordings.
+.incidentlens/
+uploads/
+artifacts/
+logs/
+*.log
+*.sqlite
+*.sqlite3
+tmp/
+temp/
+.tmp/
+recordings/
+
+# Local editor and macOS state.
+.DS_Store
+.vscode/*.local.*
+*.swp
+*.swo
+*~

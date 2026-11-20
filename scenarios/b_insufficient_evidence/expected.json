@@ -1,0 +1,10 @@
+{
+  "title": "Scenario B: inventory_sync fails with too little evidence",
+  "description": "A job exits with status 1, detailed logs are missing, and the only nearby change is unproven.",
+  "scenario": "b_insufficient_evidence",
+  "deterministic": {"first_failure": "LOG-0005", "linked_changes": [], "after_failure_changes": ["CHG-0003"]},
+  "verdict": "insufficient_evidence",
+  "max_confidence": "low",
+  "missing_evidence_mentions_any": ["driver", "executor", "stack trace", "memory", "metric", "supplier", "feed", "schedule"],
+  "max_flagged_actions": 0
+}

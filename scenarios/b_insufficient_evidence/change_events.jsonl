@@ -1,0 +1,3 @@
+{"ts": "2026-11-19T16:20:00Z", "event_type": "deploy", "actor": "ci-bot@example.com", "target": "service/customer-portal", "ticket": "CR-1050", "summary": "Deployed customer-portal v3.2.0 (frontend copy changes)."}
+{"ts": "2026-11-19T18:45:00Z", "event_type": "schedule_change", "actor": "bob@example.com", "target": "dag/inventory_sync", "ticket": "CR-1051", "summary": "Moved inventory_sync schedule from 04:00Z to 05:00Z."}
+{"ts": "2026-11-20T07:30:00Z", "event_type": "iam.binding_added", "actor": "alice@example.com", "target": "bucket/reports-synth", "principal": "svc-reporting", "permission": "storage.objects.get", "ticket": "CR-1053", "summary": "Granted read on reports-synth to svc-reporting."}

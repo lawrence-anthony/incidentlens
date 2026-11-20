@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IncidentLens: AI-Powered Data Pipeline Forensics</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script src="/static/app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Incident<span>Lens</span></h1>
+    <p class="sub">AI-Powered Data Pipeline Forensics &middot; <em>See beyond the failure.</em></p>
+  </div>
+  <div id="status" class="badges" aria-label="Service status"></div>
+</header>
+
+<main>
+  <section class="card start">
+    <div>
+      <h2>Start an investigation</h2>
+      <p class="muted">Load a synthetic scenario, or upload a pipeline log and change events as JSON Lines.</p>
+      <div id="scenarios" class="row"></div>
+    </div>
+    <form id="upload" class="upload">
+      <label>Title <input name="title" maxlength="200" placeholder="Nightly ETL failure"></label>
+      <label>Pipeline log (.jsonl) <input type="file" name="pipeline_log" accept=".jsonl,.json,.txt,.log" required></label>
+      <label>Change events (.jsonl, optional) <input type="file" name="change_events" accept=".jsonl,.json,.txt"></label>
+      <button type="submit">Upload and investigate</button>
+    </form>
+  </section>
+
+  <p id="message" class="message" role="status"></p>
+
+  <section id="result" hidden>
+    <div id="verdict" class="verdict"></div>
+    <div class="grid">
+      <section class="card">
+        <h2>Timeline</h2>
+        <p class="muted small">Reconstructed by code from the stored evidence. Click an evidence ID anywhere to locate it.</p>
+        <ol id="timeline" class="timeline"></ol>
+      </section>
+      <div class="stack">
+        <section class="card">
+          <h2>Hypotheses</h2>
+          <div id="hypotheses"></div>
+        </section>
+        <section class="card">
+          <h2>What we don't know</h2>
+          <ul id="unknowns" class="plain"></ul>
+        </section>
+        <section class="card">
+          <h2>Recovery checklist</h2>
+          <p class="note">Recommendations only. Every action requires human approval. IncidentLens never executes anything.</p>
+          <ol id="actions" class="plain"></ol>
+        </section>
+        <section class="card">
+          <h2>How we checked the AI</h2>
+          <dl id="verification" class="facts"></dl>
+        </section>
+        <section class="card">
+          <h2>Evidence custody</h2>
+          <dl id="custody" class="facts"></dl>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Investigation history</h2>
+    <ol id="history" class="history"></ol>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{"ts": "2026-11-20T03:00:00Z", "level": "INFO", "component": "scheduler", "message": "DAG run orders_daily started (run_id=scheduled__2026-11-20T03:00). Previous run 2026-11-19T03:00Z succeeded."}
+{"ts": "2026-11-20T03:00:02Z", "level": "INFO", "component": "extract_orders", "message": "Task started on etl-worker-2 as principal svc-etl-loader"}
+{"ts": "2026-11-20T03:00:03Z", "level": "INFO", "component": "extract_orders", "message": "Listing objects in raw-orders-synth/orders/dt=2026-11-19/"}
+{"ts": "2026-11-20T03:00:04Z", "level": "INFO", "component": "extract_orders", "message": "Listed 52 objects (31.4 MB) in raw-orders-synth/orders/dt=2026-11-19/"}
+{"ts": "2026-11-20T03:00:05Z", "level": "ERROR", "component": "extract_orders", "message": "403 AccessDenied: principal svc-etl-loader lacks storage.objects.get on raw-orders-synth/orders/dt=2026-11-19/part-0001.json"}
+{"ts": "2026-11-20T03:00:05Z", "level": "WARN", "component": "extract_orders", "message": "Attempt 1/3 failed; retrying in 30s"}
+{"ts": "2026-11-20T03:00:35Z", "level": "ERROR", "component": "extract_orders", "message": "403 AccessDenied: principal svc-etl-loader lacks storage.objects.get on raw-orders-synth/orders/dt=2026-11-19/part-0001.json"}
+{"ts": "2026-11-20T03:00:35Z", "level": "WARN", "component": "extract_orders", "message": "Attempt 2/3 failed; retrying in 60s"}
+{"ts": "2026-11-20T03:01:35Z", "level": "ERROR", "component": "extract_orders", "message": "403 AccessDenied: principal svc-etl-loader lacks storage.objects.get on raw-orders-synth/orders/dt=2026-11-19/part-0001.json"}
+{"ts": "2026-11-20T03:01:35Z", "level": "ERROR", "component": "extract_orders", "message": "Task failed after 3 attempts (last error: AccessDenied)"}
+{"ts": "2026-11-20T03:01:36Z", "level": "WARN", "component": "load_to_warehouse", "message": "Skipped: upstream_failed (extract_orders)"}
+{"ts": "2026-11-20T03:01:36Z", "level": "WARN", "component": "build_revenue_mart", "message": "Skipped: upstream_failed (load_to_warehouse)"}
+{"ts": "2026-11-20T03:01:37Z", "level": "ERROR", "component": "scheduler", "message": "DAG run orders_daily failed"}
+{"ts": "2026-11-20T03:15:00Z", "level": "WARN", "component": "freshness_monitor", "message": "analytics.revenue_daily is stale: last loaded 2026-11-19T03:12Z; SLA 06:00Z"}
